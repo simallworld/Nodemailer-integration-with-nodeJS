@@ -22,6 +22,8 @@ const sendMail = () => {
       address: "shivamswaroop89@gmail.com",
     },
     to: ["abc@test.com", "123@test.com", "xyz@test.com"],
+    cc: "copy@test.com",
+    bcc: "bcc@test.com",
     subject: "Testing mail sent",
     //Text mail
     // text: "Email sent with Node.js using Nodemailer!",
@@ -37,7 +39,7 @@ const sendMail = () => {
     // text: "Email with attachments",
 
     //Image embedding
-    html: `Email with embedded image: <img src="cid:uniqueId_name"/>`,
+    html: `Email with embedded image: <img width=100 src="cid:uniqueId_name"/>`,
 
       //building file in real time
     attachments: [{
