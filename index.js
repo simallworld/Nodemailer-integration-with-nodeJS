@@ -34,7 +34,11 @@ const sendMail = () => {
     // `
 
     //Mail with attachments
-    text: "Email with attachments",
+    // text: "Email with attachments",
+
+    //Image embedding
+    html: `Email with embedded image: <img src="cid:uniqueId_name"/>`,
+
       //building file in real time
     attachments: [{
       filename: "testFile.txt",
@@ -44,6 +48,12 @@ const sendMail = () => {
     {
       filename: "testFile2.jpg",
       path: __dirname + "/attachments/Shivam2.jpg"
+    },
+    //Embedded image
+    {
+      filename: "Shivam2.jpg",
+      path: __dirname + "/attachments/Shivam2.jpg",
+      cid: "uniqueId_name"
     }
   ]
   };
